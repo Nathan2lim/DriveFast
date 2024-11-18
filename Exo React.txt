@@ -1,0 +1,47 @@
+STAM GABI
+12:10
+- [ ]  Exo 2
+    
+    Création en liste: 
+    
+    Créer le composant maison devant contenir un titre h1 et une liste de composants suivante sous forme dans des `li` :
+    
+    - chambre
+    - cuisine
+    - salon
+- [ ]  Exo 3
+    
+    
+    - créer le composant Fullname devant contenir les composants Firstname et Lastname que vous devez personnaliser.
+    - Créer le composant Hobbies devant contenir les composants Cinéma, Sport à personnaliser également
+    -
+STAM GABI
+12:13
+- [ ]  Exo 4
+    
+    Dans le composant Player, créer la fonction comprenant les conditions suivantes:
+    
+    initier une variable score = 100
+    
+    dans la condition, si mon score est supérieur égal à 100 alors on affiche `‘prénom’ votre score est de "score", vous à gagné!` sinon `‘prénom’ votre score est de "score", vous avez perdu!`
+    
+    Afficher le texte en vert si c’est gagné, autrement en rouge
+Vous
+12:13
+STAM GABI
+12:10
+- [ ]  Exo 2
+    
+    Création en liste: 
+    
+    Créer le composant maison devant contenir un titre h1 et une liste de composants suivante sous forme dans des `li` :
+    
+    - chambre
+    - cuisine
+    - salon
+- [ ]  Exo 3
+    
+    Dans la même logique que l’exo 4:
+    
+    - créer le composant Fullname devant contenir les composants Firstname et Lastname que vous devez personnaliser.
+    - Créer le composant Hobbies devant contenir les composants Cinéma, Sport à personnaliser
