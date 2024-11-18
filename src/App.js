@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Car from './Components/Car.jsx'; // Assurez-vous que le chemin est correct
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App() { // Nommez le composant principal App pour éviter le conflit
+    return (
+        <div>
+            <Car brand="Toyota" model="Corolla" year={2020} /> 
+            <h1>Welcome</h1>
+        </div>
+    );
 }
 
 export default App;
