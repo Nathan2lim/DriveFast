@@ -1,38 +1,152 @@
-.App {
+/* Style global pour l'application */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff6f61, #ff9671, #ffc75f);
+  color: #fff;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Menu de navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  list-style-type: none;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul li {
+  margin: 0 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul li a {
+  color: #ffc75f;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid #ff9671;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: #ff9671;
+  color: #fff;
+  border: 2px solid #ff6f61;
+  transform: scale(1.1);
+}
+
+/* Page de jeu */
+.game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 2.5em;
+  color: #ffc75f;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+p {
+  font-size: 1.2em;
+  margin: 10px;
+  color: #fff;
+}
+
+/* Timer et messages */
+.timer {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff6f61;
+  text-shadow: 1px 1px 3px #000;
+  margin: 10px 0;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Scores */
+.score {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffc75f;
+  margin: 5px 0;
+}
+
+/* Joueur */
+.player {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  margin: 10px auto;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.player:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Bouton de score */
+button {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff6f61;
+  background-color: #ffc75f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #ff9671;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Effet audio pour la fin du jeu */
+audio {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .game-container {
+      padding: 10px;
+  }
+
+  button {
+      padding: 8px 16px;
   }
 }

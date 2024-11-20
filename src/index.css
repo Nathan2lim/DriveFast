@@ -1,13 +1,104 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Arrière-plan dynamique avec animation plus lente */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+    filter: blur(0px);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: blur(15px);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: blur(0px);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Mouvement 3D ralenti */
+@keyframes crazyMove {
+  0% { transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) scale(1); }
+  20% { transform: translate3d(70vw, -70vh, 150px) rotateX(180deg) rotateY(180deg) scale(1.5); }
+  40% { transform: translate3d(-60vw, 60vh, -200px) rotateX(-180deg) rotateY(-180deg) scale(0.6); }
+  60% { transform: translate3d(50vw, -50vh, 150px) rotateX(360deg) rotateY(360deg) scale(1.7); }
+  80% { transform: translate3d(-70vw, 70vh, -150px) rotateX(-360deg) rotateY(540deg) scale(1); }
+  100% { transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) scale(1); }
+}
+
+/* Application des durées de ralentissement */
+body {
+  background: linear-gradient(-80deg, 
+  #ff00ff, #ff4500, #00ff00, #8a2be2, #ff1493, #7fff00, #ff6347, #40e0d0, 
+  #ff00ff, #00ffcc, #ff69b4, #ff4500, #ffff54, #00ced1, #ff7f50, #ee82ee,
+  #da70d6, #adff2f, #ff1493, #00ff7f, #ff69b4, #9932cc, #ffa500, #4b0082, 
+  #00ff7f, #8b0000, #f5deb3, #d2691e, #00ff99, #ff00aa, #add8e6, #ff33cc,
+  #ff1493, #7b68ee, #ff00ff, #32cd32, #8a2be2, #ff4500, #7cfc00, #dc143c,
+  #ff6347, #40e0d0, #ff1493, #9400d3, #00ff99, #ff00ff, #8fbc8f, #ff4500,
+  #ffa07a, #ff1493, #3cb371, #ba55d3, #ff1493, #00ff7f, #ff69b4, #9932cc,
+  #ff00cc, #00ff7f, #7b68ee, #ff4500, #8b008b, #00ff99, #ff6347, #4b0082,
+  #00ff99, #ff00ff, #9932cc, #d2691e, #00ffcc, #ff1493, #7b68ee, #ee82ee,
+  #ff7f50, #7fff00, #ff1493, #00ff99, #9400d3, #dc143c, #ff4500, #ff6347,
+  #ff1493, #7cfc00, #7b68ee, #ff00ff, #9932cc, #40e0d0, #ff4500, #ff69b4,
+  #00ff7f, #ff4500, #ff00ff, #7fff00, #dc143c, #ff1493, #9932cc, #00ffcc,
+  #9400d3, #ff4500, #ff00ff, #00ff7f, #ff6347, #ff69b4, #8a2be2, #7b68ee
+);
+
+  background-size: 400% 400%;
+  animation: gradientBG 1s ease infinite; /* Ralenti à 20s */
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 5em;
+  color: #ffc75f;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  animation: crazyMove 8s linear infinite; /* Ralenti à 8s */
+}
+
+.timer {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #ff6f61;
+  text-shadow: 4px 4px 10px #000;
+  margin: 20px 0;
+  animation: crazyMove 10s linear infinite; /* Ralenti à 10s */
+}
+
+.score {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ffc75f;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 10px 0;
+  animation: crazyMove 12s ease infinite alternate; /* Ralenti à 12s */
+}
+
+.player {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  margin: 20px auto;
+  color: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+  animation: crazyMove 15s ease-in-out infinite alternate-reverse; /* Ralenti à 15s */
+}
+
+button {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6f61, #ff9671);
+  border: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  margin: 20px;
+  cursor: pointer;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+  animation: crazyMove 10s linear infinite alternate; /* Ralenti à 10s */
 }
